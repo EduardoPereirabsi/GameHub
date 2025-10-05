@@ -1,15 +1,27 @@
 package br.pucpr.GameHub.dto;
 
 public class UserDTO {
-    private Integer id;
+    private Long id;
     private String nome;
     private String email;
+    private String role; // Pode ser String ou Enum
 
-    public Integer getId() {
+    // Construtores
+    public UserDTO() {}
+
+    public UserDTO(Long id, String nome, String email, String role) {
+        this.id = id;
+        this.nome = nome;
+        this.email = email;
+        this.role = role;
+    }
+
+    // Getters e Setters
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -27,5 +39,13 @@ public class UserDTO {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
     }
 }
